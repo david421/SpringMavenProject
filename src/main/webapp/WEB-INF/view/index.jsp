@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-Welcome to Spring Boot JSP  Setup Demo.
+Welcome to Spring Boot JSP Setup Demo test.
 </body>
 </html>
