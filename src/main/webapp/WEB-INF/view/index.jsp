@@ -9,6 +9,6 @@
 <body>
 	<h2>Spring Security</h2>
 	<hr>
-    Welcome to Spring Boot JSP Security setup.
+    Welcome to Spring Boot JSP Security setup Yoohoo.
 </body>
 </html>
