@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Spring Security here</title>
 </head>
 <body>
-Welcome to Spring Boot JSP Setup Demo test.
+	<h2>Spring Security</h2>
+	<hr>
+    Welcome to Spring Boot JSP Security setup.
 </body>
 </html>

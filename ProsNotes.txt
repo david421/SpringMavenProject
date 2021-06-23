@@ -4,5 +4,5 @@ Fix Heroku deploy Branch failed error by add dependency
 
 https://stackoverflow.com/questions/42525139/maven-build-compilation-error-failed-to-execute-goal-org-apache-maven-plugins
 
-Step 2 Install Hibernate to Spring project
+Step 2 Install Spring Security to Spring project
 
