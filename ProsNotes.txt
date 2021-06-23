@@ -1,3 +1,8 @@
+Step 1 Deploy a simple Spring Maven project to Github and Heroku
+
 Fix Heroku deploy Branch failed error by add dependency
 
 https://stackoverflow.com/questions/42525139/maven-build-compilation-error-failed-to-execute-goal-org-apache-maven-plugins
+
+Step 2 Install Hibernate to Spring project
+
