@@ -12,8 +12,16 @@ public class IndexController {
 	}
 	
 	// add request mapping for /leaders
+	
 	@RequestMapping("/leaders")
 	public String showLeaders() {
 		return "leaders";
 	}	
+	
+	// add request mapping for /systems
+	@RequestMapping("/systems")	
+	public String showSystems() {
+		return "systems";
+	}
+	
 }
