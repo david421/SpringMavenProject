@@ -37,7 +37,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.loginProcessingUrl("/authenticateTheUser")
 				.permitAll()
 			.and()
-			.logout().permitAll();
+			.logout().permitAll()
+			.and() //access deny page for the role don't have right to access
+			.exceptionHandling().accessDeniedPage("/access-denied");
 	}
 
 	
