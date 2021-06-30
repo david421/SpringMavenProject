@@ -10,4 +10,10 @@ public class IndexController {
 	public String index() {
 		return "index";
 	}
+	
+	// add request mapping for /leaders
+	@RequestMapping("/leaders")
+	public String showLeaders() {
+		return "leaders";
+	}	
 }
