@@ -6,3 +6,12 @@ https://stackoverflow.com/questions/42525139/maven-build-compilation-error-faile
 
 Step 2 Install Spring Security to Spring project
 
+Step 3 Install JDBC Template to connect MySQL database, before we start we must install postgresql driver, otherwise will get error
+and the heroku server won't connect well. 
+
+<dependency>
+  <groupId>org.postgresql</groupId>
+  <artifactId>postgresql</artifactId>
+  <version>42.2.23.jre7</version>
+</dependency>
+
