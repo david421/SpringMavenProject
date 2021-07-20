@@ -3,9 +3,11 @@ package com.springmvnv0.SpringMvnPro.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -56,5 +58,31 @@ public class UserRestController {
 		userService.save(theUser);
 		
 		return theUser;
+	}
+	
+	// add mapping for PUT /users - update existing user
+	@PutMapping("/users")
+	public User updateEmployee(@RequestBody User theUser) {
+		
+		userService.save(theUser);
+		
+		return theUser;
+	}
+	
+	// add mapping for DELETE /users/{userId} - delete user
+	@DeleteMapping("/users/{userId}")
+	public String deleteUser(@PathVariable int userId) {
+		
+		User tempUser = userService.findById(userId);
+		
+		// throw exception if null
+		
+		if(tempUser == null) {
+			throw new RuntimeException("User id not found - " + userId);
+		}
+		
+		userService.deleteById(userId);
+		
+		return "Delete user id - " + userId;
 	}
 }
