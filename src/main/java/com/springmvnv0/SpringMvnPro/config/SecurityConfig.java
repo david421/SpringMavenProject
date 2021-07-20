@@ -1,5 +1,7 @@
 package com.springmvnv0.SpringMvnPro.config;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -7,6 +9,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.User.UserBuilder;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.security.web.util.matcher.RequestMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -39,8 +43,29 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.and()
 			.logout().permitAll()
 			.and() //access deny page for the role don't have right to access
-			.exceptionHandling().accessDeniedPage("/access-denied");
+			.exceptionHandling().accessDeniedPage("/access-denied").and().csrf().disable();
 	}
 
-	
+//	RequestMatcher csrfRequestMatcher = new RequestMatcher() {
+//        // Enabled CSFR protection on the following urls:
+//        //@formatter:off
+//        private AntPathRequestMatcher[] requestMatchers = 
+//            {
+//                new AntPathRequestMatcher("/**/verify"),
+//                        new AntPathRequestMatcher("/**/login*")
+//            };
+//        //@formatter:off
+//
+//        @Override
+//        public boolean matches(final HttpServletRequest request) {
+//            // If the request match one url the CSFR protection will be enabled
+//            for (final AntPathRequestMatcher rm : requestMatchers) {
+//                if (rm.matches(request)) {
+//                    System.out.println();
+//                    /* return true; */
+//                }
+//            }
+//            return false;
+//        } // method matches
+//    };
 }
